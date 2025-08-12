@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: white;
+            /* Ensure the iframe has a white background */
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mohit Rai | Cloud & DevOps Engineer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet">
+        <style>
+            :root {
+                --primary: #2563eb;
+                --primary-dark: #1d4ed8;
+                --secondary: #0f172a;
+                --accent: #7e22ce;
+                --light: #f8fafc;
+                --gray: #64748b;
+                --dark-gray: #334155;
+                --success: #10b981;
+                --transition: all 0.3s ease;
+                --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.6;
+                color: var(--secondary);
+                background-color: #f1f5f9;
+                overflow-x: hidden;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                line-height: 1.3;
+            }
+
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 12px 28px;
+                background: var(--primary);
+                color: white;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: var(--transition);
+                border: none;
+                cursor: pointer;
+                font-size: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .btn:hover {
+                background: var(--primary-dark);
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .btn-outline {
+                background: transparent;
+                border: 2px solid var(--primary);
+                color: var(--primary);
+            }
+
+            .btn-outline:hover {
+                background: var(--primary);
+                color: white;
+            }
+
+            section {
+                padding: 100px 0;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-bottom: 60px;
+                position: relative;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+                color: var(--secondary);
+                display: inline-block;
+                position: relative;
+                padding-bottom: 15px;
+            }
+
+            .section-title h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: var(--primary);
+                border-radius: 2px;
+            }
+
+            /* Header */
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: var(--shadow);
+                padding: 15px 0;
+                transition: var(--transition);
+            }
+
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: var(--primary);
+                text-decoration: none;
+            }
+
+            .logo span {
+                color: var(--accent);
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--secondary);
+                font-weight: 500;
+                font-size: 1.1rem;
+                transition: var(--transition);
+                position: relative;
+            }
+
+            .nav-links a:hover {
+                color: var(--primary);
+            }
+
+            .nav-links a::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--primary);
+                transition: var(--transition);
+            }
+
+            .nav-links a:hover::after {
+                width: 100%;
+            }
+
+            .mobile-toggle {
+                display: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            /* Hero Section */
+            .hero {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                padding-top: 80px;
+                background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: rgba(37, 99, 235, 0.1);
+                top: -150px;
+                right: -150px;
+            }
+
+            .hero::after {
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: rgba(126, 34, 206, 0.1);
+                bottom: -100px;
+                left: -100px;
+            }
+
+            .hero-content {
+                max-width: 650px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                color: var(--secondary);
+            }
+
+            .hero h1 span {
+                color: var(--primary);
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+                color: var(--dark-gray);
+            }
+
+            .hero-btns {
+                display: flex;
+                gap: 15px;
+            }
+
+            /* About Section */
+            .about {
+                background: white;
+            }
+
+            .about-content {
+                display: flex;
+                gap: 50px;
+                align-items: center;
+            }
+
+            .about-img {
+                flex: 1;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--shadow-lg);
+            }
+
+            .about-img img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .about-text {
+                flex: 1;
+            }
+
+            .about-text h3 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: var(--secondary);
+            }
+
+            .about-text p {
+                margin-bottom: 20px;
+                color: var(--dark-gray);
+            }
+
+            .skills-container {
+                margin-top: 30px;
+            }
+
+            .skills-category {
+                margin-bottom: 25px;
+            }
+
+            .skills-category h4 {
+                margin-bottom: 15px;
+                color: var(--primary);
+                font-size: 1.3rem;
+            }
+
+            .skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .skill {
+                background: #dbeafe;
+                color: var(--primary);
+                padding: 8px 16px;
+                border-radius: 30px;
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+
+            /* Experience */
+            .timeline {
+                position: relative;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 4px;
+                background: var(--primary);
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -2px;
+            }
+
+            .timeline-item {
+                padding: 20px 40px;
+                position: relative;
+                width: 50%;
+                box-sizing: border-box;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+            }
+
+            .timeline-content {
+                padding: 30px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: var(--shadow);
+                transition: var(--transition);
+            }
+
+            .timeline-content:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .timeline-content h3 {
+                color: var(--primary);
+                margin-bottom: 10px;
+            }
+
+            .timeline-content .company {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: var(--accent);
+            }
+
+            .timeline-content .date {
+                display: block;
+                color: var(--gray);
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+
+            .timeline-content ul {
+                padding-left: 20px;
+            }
+
+            .timeline-content li {
+                margin-bottom: 10px;
+                color: var(--dark-gray);
+            }
+
+            .timeline-item::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: var(--primary);
+                border: 4px solid white;
+                top: 30px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .timeline-item:nth-child(odd)::after {
+                right: -10px;
+            }
+
+            .timeline-item:nth-child(even)::after {
+                left: -10px;
+            }
+
+            /* Projects */
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 30px;
+            }
+
+            .project-card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--shadow);
+                transition: var(--transition);
+            }
+
+            .project-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .project-img {
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .project-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition);
+            }
+
+            .project-card:hover .project-img img {
+                transform: scale(1.05);
+            }
+
+            .project-info {
+                padding: 25px;
+            }
+
+            .project-info h3 {
+                margin-bottom: 15px;
+                color: var(--secondary);
+            }
+
+            .project-info p {
+                color: var(--dark-gray);
+                margin-bottom: 20px;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .tag {
+                background: #e0f2fe;
+                color: var(--primary);
+                padding: 5px 12px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 500;
+            }
+
+            /* Contact */
+            .contact {
+                background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            }
+
+            .contact-container {
+                display: flex;
+                gap: 50px;
+            }
+
+            .contact-info {
+                flex: 1;
+            }
+
+            .contact-info h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: var(--secondary);
+            }
+
+            .contact-info p {
+                margin-bottom: 30px;
+                color: var(--dark-gray);
+            }
+
+            .contact-details {
+                margin-bottom: 30px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 25px;
+            }
+
+            .contact-item i {
+                font-size: 1.5rem;
+                color: var(--primary);
+                margin-right: 15px;
+                min-width: 30px;
+            }
+
+            .contact-text h4 {
+                margin-bottom: 5px;
+                font-size: 1.2rem;
+            }
+
+            .contact-text a {
+                color: var(--dark-gray);
+                text-decoration: none;
+                transition: var(--transition);
+            }
+
+            .contact-text a:hover {
+                color: var(--primary);
+            }
+
+            .social-links {
+                display: flex;
+                gap: 15px;
+            }
+
+            .social-links a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                background: white;
+                border-radius: 50%;
+                color: var(--primary);
+                font-size: 1.3rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+
+            .social-links a:hover {
+                background: var(--primary);
+                color: white;
+                transform: translateY(-3px);
+            }
+
+            .contact-form {
+                flex: 1;
+                background: white;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: var(--shadow);
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 500;
+                color: var(--secondary);
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 14px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 1rem;
+                transition: var(--transition);
+            }
+
+            .form-control:focus {
+                border-color: var(--primary);
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+            }
+
+            textarea.form-control {
+                min-height: 150px;
+                resize: vertical;
+            }
+
+            /* Footer */
+            footer {
+                background: var(--secondary);
+                color: white;
+                padding: 60px 0 30px;
+            }
+
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+
+            .footer-about {
+                flex: 2;
+                padding-right: 30px;
+            }
+
+            .footer-about h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: white;
+            }
+
+            .footer-about p {
+                color: #cbd5e1;
+                margin-bottom: 20px;
+            }
+
+            .footer-links {
+                flex: 1;
+            }
+
+            .footer-links h4 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+                position: relative;
+                padding-bottom: 10px;
+            }
+
+            .footer-links h4::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 40px;
+                height: 3px;
+                background: var(--primary);
+            }
+
+            .footer-links ul {
+                list-style: none;
+            }
+
+            .footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .footer-links a {
+                color: #cbd5e1;
+                text-decoration: none;
+                transition: var(--transition);
+            }
+
+            .footer-links a:hover {
+                color: var(--primary);
+                padding-left: 5px;
+            }
+
+            .copyright {
+                text-align: center;
+                padding-top: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                color: #94a3b8;
+                font-size: 0.9rem;
+            }
+
+            /* Responsive */
+            @media (max-width: 992px) {
+                .hero h1 {
+                    font-size: 2.8rem;
+                }
+
+                .about-content {
+                    flex-direction: column;
+                }
+
+                .about-img {
+                    max-width: 500px;
+                    margin: 0 auto;
+                }
+
+                .timeline::after {
+                    left: 31px;
+                }
+
+                .timeline-item {
+                    width: 100%;
+                    padding-left: 70px;
+                    padding-right: 25px;
+                }
+
+                .timeline-item:nth-child(even) {
+                    left: 0;
+                }
+
+                .timeline-item:nth-child(odd)::after,
+                .timeline-item:nth-child(even)::after {
+                    left: 21px;
+                }
+
+                .contact-container {
+                    flex-direction: column;
+                }
+
+                .footer-content {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .mobile-toggle {
+                    display: block;
+                }
+
+                .nav-links {
+                    position: fixed;
+                    top: 80px;
+                    left: -100%;
+                    width: 100%;
+                    height: calc(100vh - 80px);
+                    background: white;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 40px;
+                    transition: var(--transition);
+                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                }
+
+                .nav-links.active {
+                    left: 0;
+                }
+
+                .nav-links li {
+                    margin: 15px 0;
+                }
+
+                .hero h1 {
+                    font-size: 2.3rem;
+                }
+
+                .hero-btns {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .btn {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .section-title h2 {
+                    font-size: 2rem;
+                }
+
+                .hero h1 {
+                    font-size: 2rem;
+                }
+
+                .hero p {
+                    font-size: 1rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container header-container">
+                <a href="#" class="logo">Mohit<span>.</span></a>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span>Mohit Rai</span></h1>
+                    <p>Cloud & DevOps Engineer with 4+ years of experience in AWS, automation, CI/CD pipelines, and
+                        system reliability. Passionate about building scalable, secure infrastructure solutions.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="bgrecent.png"
+                            alt="Mohit Rai">
+                    </div>
+                    <div class="about-text">
+                        <h3>Cloud & DevOps Engineer</h3>
+                        <p>I'm a results-driven Cloud and DevOps Engineer with over 4 years of experience managing and
+                            optimizing multi-cloud infrastructure, supporting application deployments, and providing
+                            top-tier technical support.</p>
+                        <p>My expertise spans AWS services, Infrastructure-as-Code (IaC), DevOps tools, and scripting
+                            languages. I have a strong track record in automating processes, improving system
+                            performance, and ensuring high availability.</p>
+                        <p>I'm passionate about learning new technologies and contributing to business success through
+                            effective support and infrastructure management. Currently based in Delhi, I'm an immediate
+                            joiner open to opportunities worldwide.</p>
+
+                        <div class="skills-container">
+                            <div class="skills-category">
+                                <h4>Cloud Technologies</h4>
+                                <div class="skills">
+                                    <span class="skill">AWS</span>
+                                    <span class="skill">EC2</span>
+                                    <span class="skill">S3</span>
+                                    <span class="skill">CloudWatch</span>
+                                    <span class="skill">CloudFormation</span>
+                                    <span class="skill">EFS</span>
+                                    <span class="skill">Azure (Learning)</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h4>DevOps Tools</h4>
+                                <div class="skills">
+                                    <span class="skill">Docker</span>
+                                    <span class="skill">Kubernetes</span>
+                                    <span class="skill">Jenkins</span>
+                                    <span class="skill">Terraform</span>
+                                    <span class="skill">Ansible</span>
+                                    <span class="skill">Git</span>
+                                    <span class="skill">GitOps</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h4>Monitoring & Scripting</h4>
+                                <div class="skills">
+                                    <span class="skill">Zabbix</span>
+                                    <span class="skill">Prometheus</span>
+                                    <span class="skill">Grafana</span>
+                                    <span class="skill">Bash</span>
+                                    <span class="skill">Python</span>
+                                    <span class="skill">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="date">Sep 2024 - Feb 2025</span>
+                            <span class="company">Velsera (Remote)</span>
+                            <h3>Customer Support Engineer</h3>
+                            <ul>
+                                <li>Monitored and managed system performance using SLA metrics, ensuring 99.9% uptime
+                                </li>
+                                <li>Utilized Docker containers to streamline application deployment and optimize
+                                    resource utilization</li>
+                                <li>Handled AWS S3 for data storage, backup, and retrieval, improving data availability
+                                    and security</li>
+                                <li>Provided technical support via Zendesk and Jira, resolving customer issues
+                                    efficiently</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="date">Mar 2024 - Aug 2024</span>
+                            <span class="company">Uniserved, Delhi</span>
+                            <h3>Cloud Engineer</h3>
+                            <ul>
+                                <li>Monitored server performance using Zabbix, reducing alerts by up to 80%</li>
+                                <li>Supported server provisioning and de-provisioning processes, cutting setup time by
+                                    60%</li>
+                                <li>Ensured 90% uptime for critical application servers through efficient resource
+                                    management</li>
+                                <li>Coordinated with cross-functional teams to ensure seamless cloud operations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="date">Feb 2022 - Feb 2024</span>
+                            <span class="company">Wipro (Remote)</span>
+                            <h3>Application Support Engineer</h3>
+                            <ul>
+                                <li>Provided technical support for AWS cloud-based applications, ensuring 99.9% uptime
+                                </li>
+                                <li>Supported JIRA ticket classification and workflow improvements, achieving 95%
+                                    resolution within SLA</li>
+                                <li>Automated client application migrations using Bash scripting, AWS, and Jenkins,
+                                    reducing errors by 80%</li>
+                                <li>Supported CI/CD pipeline, increasing deployment speed by 30% and reducing errors by
+                                    40%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="date">Aug 2019 - Jan 2022</span>
+                            <span class="company">MyMaster11 (Remote)</span>
+                            <h3>Junior DevOps Engineer</h3>
+                            <ul>
+                                <li>Provided support for deployment processes using CloudFormation and Jenkins, reducing
+                                    manual errors by 80%</li>
+                                <li>Involved in operations of Docker and Kubernetes environments, ensuring optimal
+                                    performance</li>
+                                <li>Managed the infrastructure for an online fantasy sports platform, ensuring high
+                                    availability</li>
+                                <li>Monitored applications using Prometheus and Grafana, increasing response time by 45%
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" style="background: #f1f5f9;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Key Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae6b91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1712&q=80"
+                                alt="Genomics Pipeline">
+                        </div>
+                        <div class="project-info">
+                            <h3>CGW Genomics Pipeline</h3>
+                            <p>Processed and analyzed FastQ and BCL files for genomic data, ensuring accuracy in
+                                sequencing workflows. Collaborated with cross-functional teams to optimize genomic data
+                                pipelines, enhancing processing speed and data integrity.</p>
+                            <div class="project-tags">
+                                <span class="tag">AWS</span>
+                                <span class="tag">FastQ/BCL</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80"
+                                alt="Cloud Management">
+                        </div>
+                        <div class="project-info">
+                            <h3>Cloud Management for Government Initiative</h3>
+                            <p>Managed cloud infrastructure for India's government cloud initiative (MeghRaj), ensuring
+                                compliance with government standards. Contributed to accelerating e-service delivery and
+                                optimizing ICT spending.</p>
+                            <div class="project-tags">
+                                <span class="tag">AWS</span>
+                                <span class="tag">Zabbix</span>
+                                <span class="tag">Hybrid Cloud</span>
+                                <span class="tag">Monitoring</span>
+                            </div>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                alt="Application Support">
+                        </div>
+                        <div class="project-info">
+                            <h3>Application Support for Global Platform</h3>
+                            <p>Supported the Alight Worklife® platform, enhancing the user experience for clients
+                                globally. Increased platform uptime by 15% through proactive monitoring and incident
+                                management.</p>
+                            <div class="project-tags">
+                                <span class="tag">JIRA</span>
+                                <span class="tag">CI/CD</span>
+                                <span class="tag">SLA</span>
+                                <span class="tag">Support</span>
+                            </div>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm currently open to opportunities worldwide as a Cloud & DevOps Engineer. Feel free to
+                            reach out if you have any questions or just want to connect!</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-text">
+                                    <h4>Location</h4>
+                                    <p>Delhi, India (Open to Relocation)</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-text">
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+917388867783">+91-7388867783</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-text">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:kumarmohitrai@gmail.com">kumarmohitrai@gmail.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <div class="contact-text">
+                                    <h4>LinkedIn</h4>
+                                    <p><a href="https://linkedin.com/in/mohit-kumar-rai"
+                                            target="_blank">linkedin.com/in/mohit-kumar-rai</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="mailto:kumarmohitrai@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://linkedin.com/in/mohit-kumar-rai" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/mkr-yaga"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Enter subject"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Enter your message"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <h3>Mohit Rai</h3>
+                        <p>Cloud & DevOps Engineer with 4+ years of experience in AWS, automation, CI/CD pipelines, and
+                            system reliability. Passionate about building scalable, secure infrastructure solutions.</p>
+                        <div class="social-links">
+                            <a href="mailto:kumarmohitrai@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://linkedin.com/in/mohit-kumar-rai" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2025 Mohit Rai. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Mobile Navigation Toggle
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileToggle.querySelector('i').classList.toggle('fa-bars');
+                mobileToggle.querySelector('i').classList.toggle('fa-times');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.padding = '10px 0';
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.padding = '15px 0';
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                }
+            });
+        </script>
+    </body>
+
+    </html>
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
